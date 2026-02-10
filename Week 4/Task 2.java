@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
-        sc.nextLine();   // consume newline
+        sc.nextLine();   
 
         while (T-- > 0) {
             String S = sc.nextLine();
@@ -15,19 +15,19 @@ public class Main {
 
             int mid = n / 2;
 
-            // Count frequency for first half
+            
             for (int i = 0; i < mid; i++) {
                 freq1[S.charAt(i) - 'a']++;
             }
 
-            // Count frequency for second half
+            
             int start = (n % 2 == 0) ? mid : mid + 1;
 
             for (int i = start; i < n; i++) {
                 freq2[S.charAt(i) - 'a']++;
             }
 
-            // Compare both frequency arrays
+            
             boolean isLapindrome = true;
 
             for (int i = 0; i < 26; i++) {
